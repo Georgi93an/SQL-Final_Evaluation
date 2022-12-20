@@ -1,0 +1,27 @@
+/*List of all students*/
+
+SELECT * FROM STUDENT;
+
+/*List of all students, sorted in reverse alphabetical order*/
+
+SELECT * FROM STUDENT 
+ORDER BY NAME DESC;
+/*SELECT * FROM STUDENT ORDER BY FIRSTNAME DESC*/
+
+/*Last name and first name of students domiciled in Lyon*/
+
+SELECT FIRSTNAME,NAME 
+FROM STUDENT 
+WHERE CITY='Lyon';
+
+/*Last name, first name and city of students 
+whose city contains the string « LL »*/
+
+SELECT NAME, FIRSTNAME, CITY
+FROM STUDENT
+WHERE CITY LIKE '%L%L%';
+
+/*First name of students with Dupont, Durand or Martin names*/
+
+SELECT FIRSTNAME FROM STUDENT WHERE
+NAME ="Dupond" OR NAME="Durand" OR NAME="Martin";
